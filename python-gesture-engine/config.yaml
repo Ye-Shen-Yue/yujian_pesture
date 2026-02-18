@@ -1,0 +1,70 @@
+# 御剑·灵枢 - Python手势引擎配置
+
+camera:
+  device_index: 0
+  width: 640
+  height: 480
+  fps: 30
+  flip_horizontal: true  # 镜像模式，更直觉
+
+tracking:
+  max_hands: 2
+  detection_confidence: 0.5    # 降低：提高检测灵敏度
+  tracking_confidence: 0.4     # 降低：提高追踪稳定性
+  smoother:
+    min_cutoff: 1.7            # 提高：减少滤波延迟
+    beta: 0.01                 # 提高：更快响应速度变化
+    d_cutoff: 1.0
+
+gestures:
+  # 原子手势阈值
+  grab:
+    fingertip_palm_distance: 0.10   # 放宽(原0.08)
+    min_curl_fingers: 3             # 放宽(原4)
+  push:
+    min_velocity_z: 0.08            # 降低(原0.15)
+    palm_facing_threshold: 0.3      # 降低(原0.5)
+  pull:
+    min_velocity_z: -0.08           # 降低(原-0.15)
+    palm_facing_threshold: -0.3     # 降低(原-0.5)
+  rotate:
+    min_angular_velocity: 1.0       # 降低(原1.5)
+    sustain_frames: 3               # 减少(原5)
+  pinch:
+    thumb_index_distance: 0.06      # 放宽(原0.04)
+
+  # 组合手势
+  combo:
+    max_interval: 1.2               # 放宽(原0.8)
+    cooldown: 0.3                   # 缩短(原0.5)
+
+  # 双手手势
+  dual_hand:
+    palms_together_distance: 0.15   # 大幅放宽(原0.06)
+    open_distance: 0.18             # 降低(原0.3)
+    close_velocity: 0.15            # 降低(原0.3)
+    circle_min_radius: 0.05         # 降低(原0.08)
+    circle_min_points: 8            # 减少(原12)
+    # 万剑归宗
+    wan_jian:
+      push_velocity: 0.06           # 双手前推速度阈值
+      fist_hold_time: 0.3           # 握拳保持时间(秒)
+
+  # 状态机参数
+  state_machine:
+    activation_threshold: 0.4       # 降低(原0.6)
+    sustain_threshold: 0.25         # 降低(原0.4)
+    min_duration: 0.05              # 缩短(原0.1)
+
+network:
+  host: "localhost"
+  port: 8765
+  send_rate: 60
+
+debug:
+  show_visualization: true
+  show_fps: true
+  show_landmarks: true
+  show_gesture_labels: true
+  log_level: "INFO"
+  log_file: null

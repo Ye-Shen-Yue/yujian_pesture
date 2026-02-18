@@ -1,0 +1,10 @@
+
+=== Sun Feb  8 12:45:41 2026
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were added:
+  com.unity.modules.infinity@1.0.0
+The following packages were updated:
+  com.unity.textmeshpro from version 3.0.6 to 3.0.9

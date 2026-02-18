@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:yousandi.cn,2023:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13855f8837e0d6740a23d4d39f722a4c, type: 3}
+  m_Name: LiangYiFormation
+  m_EditorClassIdentifier: 
+  FormationName: "\u4E24\u4EEA\u9635"
+  Description: "\u9634\u9633\u5BF9\u7ACB\uFF0C\u4E24\u5251180\xB0\u5BF9\u79F0"
+  SlotPositions:
+  - {x: 2, y: 0, z: 0}
+  - {x: -2, y: 0, z: 0}
+  RotationSpeed: 30
+  FormationColor: {r: 0.5, g: 0.8, b: 1, a: 1}
+  FormationRadius: 2
+  TransitionCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  TransitionDuration: 1.2
